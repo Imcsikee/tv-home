@@ -1,0 +1,29 @@
+diff --git a/launcher/AndroidManifest.xml b/launcher/AndroidManifest.xml
+index f98fc08..4a8746c 100644
+--- a/launcher/AndroidManifest.xml
++++ b/launcher/AndroidManifest.xml
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.mihir.tvhome"
+-    android:versionCode="1"
+-    android:versionName="1.0">
++    android:versionCode="2"
++    android:versionName="1.0.1">
+ 
+     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+diff --git a/launcher/src/com/mihir/tvhome/MainActivity.java b/launcher/src/com/mihir/tvhome/MainActivity.java
+index a1a2b62..b4e32a6 100644
+--- a/launcher/src/com/mihir/tvhome/MainActivity.java
++++ b/launcher/src/com/mihir/tvhome/MainActivity.java
+@@ -366,6 +366,9 @@ public class MainActivity extends Activity {
+         Collections.sort(rest, (x, y) -> x.label.compareToIgnoreCase(y.label));
+ 
+         dockRow.removeAllViews();
++        // Keep a single installed favourite from expanding to a screen-sized banner.
++        // Unused slots stay empty; CENTER gravity keeps smaller docks centred.
++        dockRow.setWeightSum(Math.max(5, dock.size()));
+         grid.removeAllViews();
+         dockCards.clear();
+         gridCards.clear();

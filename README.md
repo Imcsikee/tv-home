@@ -1,28 +1,26 @@
-# TV Home – Windows-telepítő
+# TV Home – Windows letöltések
 
-[**A teljes Windows-csomag letöltése (ZIP, kb. 13 MB)**](https://github.com/Imcsikee/tv-home/raw/refs/heads/downloads/tv-home-windows-20261026/tv-home-windows-visszaallithato.zip)
+## Javítás 1.0.1: óriási YouTube-csempe
 
-A csomag a projekt változatlan forrásából fordított APK-t, a Google hivatalos Windows Platform Tools eszközeit, telepítőt, visszaállítót és a licenceket tartalmazza.
+[**A javított Windows-frissítőcsomag letöltése (ZIP, kb. 13 MB)**](https://github.com/Imcsikee/tv-home/raw/refs/heads/downloads/tv-home-windows-20261026/tv-home-windows-fix-1.0.1.zip)
 
-1. A Windows gép legyen a tévével azonos hálózaton.
-2. Töltsd le és csomagold ki a teljes ZIP-et.
-3. A tévén nyomd meg a Home gombot, majd Windows alatt indítsd az `INSTALL.cmd` fájlt.
-4. A tévén fogadd el az ADB-hibakeresési engedélykérést, ha megjelenik.
+Ha csak egy vagy két kedvenc alkalmazás volt telepítve, a dokkoló túlméretezte a csempéket. Az 1.0.1 verzió legalább öt helyre méretezi a kedvenceket, így egyetlen YouTube-csempe sem foglalja el az egész sávot.
 
-A beállított cím `192.168.0.4:5555`. Android 11 vagy újabb szükséges. A telepítő leáll, ha nem tudja menteni és ellenőrizni az eredeti kezdőképernyő beállítását. Gyári alkalmazást nem töröl, nem tilt le, és alkalmazásadatot nem ürít.
+1. A frissítő ZIP-et külön új mappába csomagold ki.
+2. A Windows gép legyen a tévével azonos hálózaton.
+3. Indítsd az **UPDATE.cmd** fájlt. Most nem az INSTALL.cmd kell.
+4. Ha a tévé engedélyt kér, fogadd el.
 
-## Az eredeti kezdőképernyő visszaállítása
+A frissítő a meglévő appot frissíti ugyanazzal az aláírással. Nem módosítja az alapértelmezett Home-ot, és nem írja át a korábbi telepítőmappában található mentést. Nem töröl vagy tilt le gyári alkalmazásokat. A cím továbbra is `192.168.0.4:5555`. Android 11+ szükséges.
 
-Indítsd a `RESTORE.cmd` fájlt ugyanabból a kicsomagolt mappából. Tartsd meg a teljes mappát, különösen a telepítéskor létrejövő `backup` mappát és `last-backup.txt` fájlt.
+**Tartsd meg a RÉGI telepítőmappát!** Az eredeti tévéfelülethez annak a mappának a **RESTORE.cmd** fájljával tudsz visszatérni. A szükséges, tévéhez tartozó backup és last-backup.txt a régi mappában van, nem a friss letöltésben.
 
-A gyári kezdőképernyő alkalmazása és adatai megmaradnak; a visszaállító az eredeti alapértelmezett HOME-tevékenységet választja ki újra, és ellenőrzi a beállítást. Ez nem teljes firmware- vagy alkalmazásadat-mentés. A csomag a letöltéskor még nem tartalmazza a tévé mentését: azt a helyi Windows-telepítő készíti el.
+Ez a HOME-beállítás visszaállítása, nem teljes tévérendszer-mentés.
 
-Az APK fordítása, aláírása, igazítása, a ZIP integritása és a hivatalos ADB-archívum ellenőrzőösszege ellenőrizve lett. A Windows-szkriptek és a tényleges tévés telepítés/visszaállítás futtatása még nincs tesztelve.
+A frissítő Windows alatti futtatása és a konkrét tévés megjelenés nincs itt tesztelve. A fordítás, az APK aláírása/igazítása, az eredeti aláírással egyezés és a ZIP integritása ellenőrizve lett.
 
-SHA-256 (`tv-home-windows-visszaallithato.zip`):
+## Korábbi teljes telepítő
 
-```text
-1c248a9d134fc6d63ae2bfe85759e5ac62b231640fe580ab57a41e3a4662169f
-```
+[Az eredeti Windows-telepítőcsomag](tv-home-windows-visszaallithato.zip) változatlanul megmaradt.
 
-Ez az ág a letölthető csomagot tartalmazza.
+A forrásjavítás: [dock-sizing-fix.patch](dock-sizing-fix.patch).
