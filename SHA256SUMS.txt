@@ -1,2 +1,3 @@
 1c248a9d134fc6d63ae2bfe85759e5ac62b231640fe580ab57a41e3a4662169f  tv-home-windows-visszaallithato.zip
 0ee10468a4f5e269d84bab5270401e5b90c207965b660bc0dd68a053fca1389e  tv-home-windows-fix-1.0.1.zip
+f4983d2e22d257c57fa5e1a6a2b004a08a62b3704ed8dbfaaaa122b5118b84a2  tv-home-2.0.0-native-fast.zip
